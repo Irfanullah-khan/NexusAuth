@@ -1,112 +1,102 @@
-# NexusAuth 🔐
+# NexusAuth
 
 <p align="center">
-  <b>Enterprise-Grade MERN Authentication Platform</b><br>
-  Secure • Scalable • Modern • Self-Hosted
+  <img src="https://img.shields.io/badge/MERN-FullStack-green?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Status-Live-success?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Auth-JWT%20%7C%20Google%20OAuth-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Frontend-Netlify-00C7B7?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Backend-Render-5A29E4?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Database-MongoDB%20Atlas-47A248?style=for-the-badge" />
 </p>
 
 <p align="center">
-  JWT Sessions • Google OAuth • OTP Verification • Password Reset • RBAC
+  Enterprise-Grade MERN Authentication Platform — Secure · Scalable · Modern · Production Ready
 </p>
 
----
-
-##  Overview
-
-**NexusAuth** is a production-ready full-stack authentication and authorization platform built using the MERN stack.
-
-It delivers the security and user experience of modern identity providers while giving full ownership of your users, tokens, and infrastructure.
-
-Designed for startups, SaaS products, agencies, and developers who need secure authentication without vendor lock-in.
 
 ---
 
-##  Core Features
+## Overview
 
-### 🔐 Authentication
+**NexusAuth** is a fully deployed, production-ready authentication and authorization platform built with the **MERN Stack**. It provides enterprise-level features including secure registration, Google OAuth, OTP email verification, password recovery, JWT security, protected routes, and cloud deployment.
 
-* Email & Password Registration
-* Secure Login System
-* Google OAuth Sign-In
-* OTP Email Verification
-* Forgot Password Flow
-* Password Reset via Secure Token
-* Logout Functionality
-
-### 🛡 Security
-
-* JWT Access + Refresh Tokens
-* HTTP-only Secure Cookies
-* Role Based Access Control (RBAC)
-* Protected Routes
-* Password Hashing with bcrypt
-* Helmet Security Headers
-* Rate Limiting
-* CSRF Protection Ready
-
-### 🎨 Frontend Experience
-
-* Modern Responsive UI
-* React Context Authentication State
-* Axios Auto Refresh Interceptors
-* Clean Dashboard Experience
-* Mobile Friendly Design
+**Ideal for:** SaaS products, startups, admin dashboards, enterprise panels, agencies, and full-stack applications.
 
 ---
 
-## 🛠 Tech Stack
+## Features
+
+### Authentication
+- Email & Password Registration
+- Secure Login / Logout
+- Google OAuth Sign-In
+- OTP Email Verification
+- Forgot Password & Password Reset via Email Token
+- Persistent Login Sessions
+
+### Security
+- JWT Access Tokens & Refresh Token System
+- HTTP-Only Secure Cookies
+- Password Hashing with bcrypt
+- Protected API Routes
+- Role-Based Access Control (RBAC Ready)
+- Helmet Security Middleware
+- CORS Protection & Rate Limiting
+- Secure Environment Variables
 
 ### Frontend
+- Fully Responsive, Modern UI
+- React Context for Auth State Management
+- Axios with Auto Token Refresh
+- Protected React Routes
+- Mobile-Friendly UX
 
-* React.js
-* Vite
-* Tailwind CSS
-* React Router DOM
-* Axios
-* React Hook Form
-* Zod
+---
+##  Live Website
+🔗 [Visit NexusAuth](https://nexusauth-app.netlify.app)
 
-### Backend
+---
+## Tech Stack
 
-* Node.js
-* Express.js
-* MongoDB
-* Mongoose
-* JWT
-* bcryptjs
-* Cookie Parser
-* Express Validator
-
-### Deployment
-
-* GitHub
-* Netlify
-* Render
-* MongoDB Atlas
+| Layer | Technologies |
+|-------|-------------|
+| **Frontend** | React.js, Vite, Tailwind CSS, React Router DOM, Axios, Context API, React Hook Form, Zod |
+| **Backend** | Node.js, Express.js, MongoDB Atlas, Mongoose, JWT, bcryptjs, Cookie Parser, Express Validator, Nodemailer |
+| **DevOps** | GitHub, Netlify, Render, MongoDB Atlas, Google Cloud Console |
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
-```text
+```
 NexusAuth/
-├── frontend/     # React Client
-├── backend/      # Express API
-└── .gitignore
+├── frontend/              # React Client Application
+│   ├── src/
+│   ├── public/
+│   └── vite.config.js
+│
+├── backend/               # Express REST API
+│   ├── routes/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   └── server.js
+│
+└── README.md
 ```
 
 ---
 
-## ⚙️ Local Development Setup
+## Local Development
 
-### 1️⃣ Clone Repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/Irfanullah-khan/NexusAuth.git
 cd NexusAuth
 ```
 
-### 2️⃣ Backend Setup
+### 2. Backend Setup
 
 ```bash
 cd backend
@@ -114,7 +104,7 @@ npm install
 npm run dev
 ```
 
-### 3️⃣ Frontend Setup
+### 3. Frontend Setup
 
 ```bash
 cd frontend
@@ -124,86 +114,49 @@ npm run dev
 
 ---
 
-## 🔑 Environment Variables
+## Production Deployment
 
-### Backend `.env`
+### Frontend — Netlify
+- Connected to GitHub for auto-deploy on push
+- SPA route redirects configured
+- Production domain live
 
-```env
-PORT=5000
-MONGO_URI=your_mongodb_uri
-JWT_SECRET=your_secret
-GOOGLE_CLIENT_ID=your_google_client_id
-CLIENT_URL=http://localhost:5173
+### Backend — Render
+- Express server live with secured environment variables
+- MongoDB Atlas connected with CORS configured for production
+
+### Database — MongoDB Atlas
+- Cloud-hosted NoSQL database
+- Secure access control with live user data
+
+---
+
+## Authentication Flow
+
+```
+User Registration
+       ↓
+OTP Email Verification
+       ↓
+Login
+       ↓
+JWT Access Token Issued
+       ↓
+Protected Dashboard Access
+       ↓
+Refresh Token Session Renewal
 ```
 
-### Frontend `.env`
+---
 
-```env
-VITE_API_URL=http://localhost:5000
-VITE_GOOGLE_CLIENT_ID=your_google_client_id
-```
+## Author
+
+**Irfanullah Khan** — Full Stack Developer focused on building secure, scalable, production-grade web applications.
+
+- GitHub: [@Irfanullah-khan](https://github.com/Irfanullah-khan)
 
 ---
 
-## 🌐 Live Demo
+## License
 
-🚧 Coming Soon
-
-* Frontend: Deploying on Netlify
-* Backend API: Deploying on Render
-
----
-
-## 📸 Screenshots
-
-🚧 Coming Soon
-
-* Landing Page
-* Login Page
-* Register Page
-* Dashboard
-* Password Reset Flow
-
----
-
-## 🔮 Future Roadmap
-
-* Two Factor Authentication (2FA)
-* Admin Dashboard
-* Login Activity History
-* Multi Device Session Management
-* GitHub Login
-* Passkeys / Face Login
-* AI Fraud Detection
-
----
-
-## 🤝 Why NexusAuth?
-
-Instead of paying monthly fees to managed auth providers, NexusAuth gives you:
-
-✅ Full Data Ownership
-✅ Full Code Ownership
-✅ Enterprise Security Standards
-✅ Zero Per-User Cost
-✅ Fully Customizable Platform
-
----
-
-## 👨‍💻 Author
-
-**Irfanullah Khan**
-
-Passionate Full Stack Developer focused on building secure modern web applications.
-
----
-
-## ⭐ Support
-
-If you like this project, give it a **star** on GitHub and follow for future updates.
-
----
-
-## 📜 License
-
-This project is licensed for educational and portfolio purposes.
+This project is licensed for educational, portfolio, and learning purposes.
